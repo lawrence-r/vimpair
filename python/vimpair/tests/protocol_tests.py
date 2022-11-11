@@ -1,5 +1,5 @@
 from unittest import TestCase
-from mock import Mock
+from unittest.mock import Mock
 from ddt import data, ddt
 from os import path
 from hashlib import sha224

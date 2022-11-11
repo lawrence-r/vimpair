@@ -1,5 +1,5 @@
 from functools import partial
-from mock import Mock
+from unittest.mock import Mock
 from socket import error, timeout
 from unittest import TestCase
 

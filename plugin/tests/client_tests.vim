@@ -1,7 +1,7 @@
 execute("source " . expand("<sfile>:p:h") . "/test_tools.vim")
 execute("source " . expand("<sfile>:p:h") . "/../vimpair.vim")
 
-call g:VimpairRunPython("from mock import Mock")
+call g:VimpairRunPython("from unittest.mock import Mock")
 
 let g:VimpairShowStatusMessages = 0
 let g:VimpairTimerInterval = 1
