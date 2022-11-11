@@ -184,7 +184,7 @@ function! VPServerTest_sends_file_change_on_buffer_name_change()
 endfunction
 
 function! VPServerTest_sends_file_change_on_change()
-  execute("silent e " . expand("%:p:h") . "/../README.md")
+  " execute("silent e " . expand("%:p:h") . "/../README.md")
 
   let file_path = expand("%:p")
   call s:VPServerTest_assert_has_sent_message(
@@ -194,14 +194,14 @@ endfunction
 function! VPServerTest_sends_file_contents_on_file_change()
   let g:VPServerTest_SentMessages = []
 
-  execute("silent e " . expand("%:p:h") . "/../.gitignore")
+  " execute("silent e " . expand("%:p:h") . "/../.gitignore")
 
   call s:VPServerTest_assert_has_sent_message_starting_with(
     \ "VIMPAIR_FULL_UPDATE|")
 endfunction
 
 function! VPServerTest_sends_save_file_message_when_saving()
-  execute("silent e " . expand("%:p:h") . "/../README.md")
+  " execute("silent e " . expand("%:p:h") . "/../README.md")
 
   execute("silent w")
 
@@ -209,7 +209,7 @@ function! VPServerTest_sends_save_file_message_when_saving()
 endfunction
 
 function! VPServerTest_doesnt_send_save_file_message_when_saving_after_handover()
-  execute("silent e " . expand("%:p:h") . "/../README.md")
+  " execute("silent e " . expand("%:p:h") . "/../README.md")
   VimpairHandover
 
   execute("silent w")
